@@ -43,9 +43,9 @@ R12725060 陳祖譽  </br>
 ### Model Formulation
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Objective Function** 
  - minimize _T_ </br></br>
-**Constraints** </br>
+**Constraints** </br></br>
  - Constraint 1: a given vehicle will only use one link to move in each journey. </br>
-∑<sub>a∈N</sub> ∑<sub>b∈N</sub> _X<sup>hπ</sup><sub>ab</sub>_ ≤ 1 ∀h ∈ H,π ∈ PI.
+∑<sub>a∈N</sub> ∑<sub>b∈N</sub> _X<sup>hπ</sup><sub>ab</sub>_ ≤ 1 ∀h ∈ H,π ∈ PI. </br></br>
  - Constraint 2: allowing vehicle journeys to be connected, i.e., the end of the previous journey is the starting point of the next.
  - Constraint 3: guaranteeing that the commodities shipped to the DC are zero.
  - Constraint 4: ensuring that the final inventory level of all nodes must be greater than or equal to their demand.
