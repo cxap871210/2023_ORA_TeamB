@@ -45,13 +45,22 @@ R12725060 Welbey Prasadirta 陳祖譽  </br>
  - minimize _T_ </br></br>
 **Constraints** </br></br>
  - Constraint 1: a given vehicle will only use one link to move in each journey. </br>
-∑<sub>a∈N</sub> ∑<sub>b∈N</sub> _X<sup>hπ</sup><sub>ab</sub>_ ≤ 1 ∀h ∈ H,π ∈ PI. </br></br>
- - Constraint 2: allowing vehicle journeys to be connected, i.e., the end of the previous journey is the starting point of the next.
- - Constraint 3: guaranteeing that the commodities shipped to the DC are zero.
- - Constraint 4: ensuring that the final inventory level of all nodes must be greater than or equal to their demand.
- - Constraint 5: vehicle capacity.
- - Constraint 6: maximizing total times in each journey.
- - Constraint 7: decision variable constraints.
+∑<sub>a∈N</sub> ∑<sub>b∈N</sub> _X<sup>hπ</sup><sub>ab</sub>_ ≤ 1 ∀h ∈ H, π ∈ PI. </br></br>
+ - Constraint 2: allowing vehicle journeys to be connected, i.e., the end of the previous journey is the starting point of the next. </br>
+∑<sub>a∈N</sub> _X<sup>h(π-1)</sup><sub>ab</sub>_ ≤ ∑<sub>c∈N</sub> _X<sup>hπ</sup><sub>bc</sub>_ ∀b ∈ N, h ∈ H, π ∈ {2,3,…,θ}. </br></br>
+ - Constraint 3: guaranteeing that the commodities shipped to the DC are zero. </br>
+_Y<sup>hπ</sup><sub>ga1</sub>_ = 0 ∀h ϵ H, π ϵ PI, g ϵ G, a ϵ N. </br></br>
+ - Constraint 4: ensuring that the final inventory level of all nodes must be greater than or equal to their demand. </br>
+_I<sub>gb</sub>_ + ∑<sub>h∈H</sub> ∑<sub>π∈PI</sub> ∑<sub>a∈N</sub> _Y<sup>hπ</sup><sub>gab</sub>_ - ∑<sub>h∈H</sub> ∑<sub>π∈PI</sub> ∑<sub>c∈N</sub> _Y<sup>hπ</sup><sub>gbc</sub>_ ≥ _Q<sub>gb</sub>_ ∀g ϵ G, b ϵ N. </br></br>
+ - Constraint 5: vehicle capacity. </br>
+∑<sub>g∈G</sub> _Y<sup>hπ</sup><sub>gab</sub>_ ≤ _carryingvolume_ x _X<sup>hπ</sup><sub>ab</sub>_ ∀h ∈ H, π ∈ PI, a ∈ N, b ∈ N. </br></br>
+ - Constraint 6: maximizing total times in each journey. </br>
+_T_ ≥  ∑<sub>π∈PI</sub> ∑<sub>a∈N</sub> ∑<sub>b∈N</sub> _X<sup>hπ</sup><sub>ab</sub>_ x _t<sub>ab<sub>_ ∀h ϵ H. </br></br>
+ - Constraint 7: decision variable constraints. </br>
+_X<sup>hπ</sup><sub>ab</sub>_ ϵ {0,1} ∀a ϵ N, b ϵ N, h ϵ H, π ϵ PI. </br> 
+_Y<sup>hπ</sup><sub>gab</sub>_ ≥ 0 ∀g ϵ G, a ϵ N, b ϵ N, h ϵ H, π ϵ PI. </br> 
+_t<sub>ab<sub>_ ≥ 0 ∀a ϵ N, b ϵ N. </br>
+
 
 ## Data Collection and Analysis Result
 ### Data Collection
