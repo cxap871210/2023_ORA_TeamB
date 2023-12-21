@@ -53,6 +53,20 @@ R12725060 Welbey Prasadirta 陳祖譽  </br>
  - _volume<sub>g_</sub>: volume of one unit of commodity _g_.
  - _carryingvolume_: total carrying volume of each vehicle.
  -	_t<sub>ab<sub>_: the travel time required from node _a_ to node _b_. </br></br>
+
+| Nodes                    | Initial Inventory of Blood Packages | Initial Inventory of Medication | Demand of  Blood Packages | Demand of Medication |
+|--------------------------|--------------------------------------|--------------------------------|---------------------------|----------------------|
+| DC                       | Unlimited Supplies                   | Unlimited Supplies             | No Demand                 | No Demand            |
+| 1<sup>st</sup> RC        | 30                                   | 20                             | 60                        | 40                   |
+| 2<sup>nd</sup> RC        | 20                                   | 30                             | 50                        | 50                   |
+| 3<sup>rd</sup> RC        | 50                                   | 20                             | 90                        | 30                   |
+| 4<sup>th</sup> RC        | 30                                   | 30                             | 50                        | 40                   |
+| 5<sup>th</sup> RC        | 40                                   | 20                             | 70                        | 40                   |
+</br>
+-  Three trucks, each with a maximum of 20 journey numbers, each with a maximum of 250 carrying volumes. </br>
+-  Blood Package, each blood package will fill 5 trucks carrying volume.</br>
+-  Medication go bag, each medication go bag will fill 10 trucks carrying volume. 
+</br>
 **Decision Variables** </br>
  + _X<sup>hπ</sup><sub>ab</sub>_: if it is 1, it means that vehicle _h_ travels from node _a_ to node _b_ during its πth journey; otherwise, it is 0.
  + _Y<sup>hπ</sup><sub>gab</sub>_: the quantity of commodity _g_ transported by vehicle _h_ traveling from node _a_ to node _b_ during its πth journey.
