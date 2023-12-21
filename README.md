@@ -63,11 +63,12 @@ R12725060 Welbey Prasadirta 陳祖譽  </br>
 | 4<sup>th</sup> RC        | 30                                   | 30                             | 50                        | 40                   |
 | 5<sup>th</sup> RC        | 40                                   | 20                             | 70                        | 40                   |
 </br>
+
 -  Three trucks, each with a maximum of 20 journey numbers, each with a maximum of 250 carrying volumes. </br>
 -  Blood Package, each blood package will fill 5 trucks carrying volume.</br>
--  Medication go bag, each medication go bag will fill 10 trucks carrying volume. 
-</br>
-**Decision Variables** </br>
+-  Medication go bag, each medication go bag will fill 10 trucks carrying volume. </br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Decision Variables** 
  + _X<sup>hπ</sup><sub>ab</sub>_: if it is 1, it means that vehicle _h_ travels from node _a_ to node _b_ during its πth journey; otherwise, it is 0.
  + _Y<sup>hπ</sup><sub>gab</sub>_: the quantity of commodity _g_ transported by vehicle _h_ traveling from node _a_ to node _b_ during its πth journey.
 
