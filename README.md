@@ -25,8 +25,8 @@ R12725060 陳祖譽  </br>
 ### Problem Definition
 
 ## Methodology
-### Notation and Definitions
-   **Sets** </br>
+### Notation and Definitions 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Sets** 
  - _H_: set of vehicles, indexed by _h_.
  - _PI_: set of journey number, indexed by π ∈ {1,2,…,θ}.
  - _N_: set of nodes, indexed by _a, b, c_.
@@ -35,13 +35,23 @@ R12725060 陳祖譽  </br>
  - _Q<sub>gb</sub>_: demand of commodity _g_ at RC _b_.
  - _volume<sub>g_</sub>: volume of one unit of commodity _g_.
  - _carryingvolume_: total carrying volume of each vehicle.
- -	_t<sub>ab<sub>_: the travel time required from node _a_ to node _b_.
-</br></br>
+ -	_t<sub>ab<sub>_: the travel time required from node _a_ to node _b_. </br></br>
 **Decision Variables** </br>
- + _X<sub>ab</sub><sup>hπ</sup>_: if it is 1, it means that vehicle _h_ travels from node _a_ to node _b_ during its πth journey; otherwise, it is 0.
- + _Y<sub>gab</sub><sup>hπ</sup>_: the quantity of commodity _g_ transported by vehicle _h_ traveling from node _a_ to node _b_ during its πth journey.
+ + _X<sup>hπ</sup><sub>ab</sub>_: if it is 1, it means that vehicle _h_ travels from node _a_ to node _b_ during its πth journey; otherwise, it is 0.
+ + _Y<sup>hπ</sup><sub>gab</sub>_: the quantity of commodity _g_ transported by vehicle _h_ traveling from node _a_ to node _b_ during its πth journey.
 
-
+### Model Formulation
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Objective Function** 
+ - minimize _T_ </br></br>
+**Constraints** </br>
+ - Constraint 1: a given vehicle will only use one link to move in each journey. </br>
+∑<sub>a∈N</sub> ∑<sub>b∈N</sub> _X<sup>hπ</sup><sub>ab</sub>_ ≤ 1 ∀h ∈ H,π ∈ PI.
+ - Constraint 2: allowing vehicle journeys to be connected, i.e., the end of the previous journey is the starting point of the next.
+ - Constraint 3: guaranteeing that the commodities shipped to the DC are zero.
+ - Constraint 4: ensuring that the final inventory level of all nodes must be greater than or equal to their demand.
+ - Constraint 5: vehicle capacity.
+ - Constraint 6: maximizing total times in each journey.
+ - Constraint 7: decision variable constraints.
 
 ## Data Collection and Analysis Result
 ### Data Collection
