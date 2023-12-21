@@ -26,7 +26,7 @@ R12725060 陳祖譽  </br>
 
 ## Methodology
 ### Notation and Definitions
-**Sets** </br>
+   **Sets** </br>
  - _H_: set of vehicles, indexed by _h_.
  - _PI_: set of journey number, indexed by π ∈ {1,2,…,θ}.
  - _N_: set of nodes, indexed by _a, b, c_.
@@ -36,10 +36,10 @@ R12725060 陳祖譽  </br>
  - _volume<sub>g_</sub>: volume of one unit of commodity _g_.
  - _carryingvolume_: total carrying volume of each vehicle.
  -	_t<sub>ab<sub>_: the travel time required from node _a_ to node _b_.
-</br>
+</br></br>
 **Decision Variables** </br>
- + _X<sub>ab</sub><sup>hπ</sup>_: if it is 1, it means that vehicle _h_ travels from node _a_ to node _b_ during its _π_th journey; otherwise, it is 0.
- + _Y<sub>gab</sub><sup>hπ</sup>_: the quantity of commodity _g_ transported by vehicle _h_ traveling from node _a_ to node _b_ during its _π_th journey.
+ + _X<sub>ab</sub><sup>hπ</sup>_: if it is 1, it means that vehicle _h_ travels from node _a_ to node _b_ during its πth journey; otherwise, it is 0.
+ + _Y<sub>gab</sub><sup>hπ</sup>_: the quantity of commodity _g_ transported by vehicle _h_ traveling from node _a_ to node _b_ during its πth journey.
 
 
 
