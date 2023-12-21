@@ -1,7 +1,7 @@
 # Multi-Commodity Distribution Under Uncertainty in Disaster Response Phase
 
 ## ORA Term Project (2023 Fall)
-Team B </br></br>
+Team B (Supply Chain Resilience)</br></br>
 T12303106 David Benedi </br>
 R11725028 陳柄瑞  </br>
 R12725060 陳祖譽  </br>
