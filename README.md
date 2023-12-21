@@ -25,6 +25,23 @@ R12725060 Welbey Prasadirta 陳祖譽  </br>
 ### Problem Definition
 
 ## Methodology
+### Inventory Routing Problem
+
+### Model Objective 
+to identify the most effective vehicle routes for distributing vital commodities from a Distribution Center (DC) to various Local Relief Centers (RCs) and between these RCs. The goal is to actively meet each Relief Center (RC) demand while minimizing the completion time (longest) of vehicle assignments, all within the context of stochastic traffic conditions caused by earthquake impacts. The model will account for each RC's pre-existing inventory sourced from local donations.
+
+### Model Assumptions
+-	Multiple vehicles can fulfill RC demand level (Split Delivery).
+-	We can divide RC demand into multiple deliveries instead of being shipped as one complete package. 
+-	Vehicles have the permission to make multiple visits to various facilities to perform loading and unloading activities (Multiple Destination).
+-	Loading and unloading times are assumed to be negligible.
+-	The locations of all facilities, including a DC and five RCs, are known.
+-	DC maintains an unlimited supply of commodities and has no demand for them.
+-	Each RC has a known initial inventory level and demand for each commodity.
+-	DC and RCs operate without a maximum limit on their inventory capacity.
+-	The number of vehicles in the network is known, and each vehicle has the same capacity and can carry any commodity.
+-	Vehicles heading to a DC do not need to carry commodities.
+
 ### Notation and Definitions 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Sets** 
  - _H_: set of vehicles, indexed by _h_.
@@ -55,7 +72,7 @@ _I<sub>gb</sub>_ + ∑<sub>h∈H</sub> ∑<sub>π∈PI</sub> ∑<sub>a∈N</sub>
  - Constraint 5: vehicle capacity. </br>
 ∑<sub>g∈G</sub> _Y<sup>hπ</sup><sub>gab</sub>_ ≤ _carryingvolume_ x _X<sup>hπ</sup><sub>ab</sub>_ ∀h ∈ H, π ∈ PI, a ∈ N, b ∈ N. </br></br>
  - Constraint 6: maximizing total times in each journey. </br>
-_T_ ≥  ∑<sub>π∈PI</sub> ∑<sub>a∈N</sub> ∑<sub>b∈N</sub> _X<sup>hπ</sup><sub>ab</sub>_ x _t<sub>ab<sub>_ ∀h ϵ H. </br></br>
+_T_ ≥  ∑<sub>π∈PI</sub> ∑<sub>a∈N</sub> ∑<sub>b∈N</sub> _X<sup>hπ</sup><sub>ab</sub>_ × _t<sub>ab<sub>_ ∀h ϵ H. </br></br>
  - Constraint 7: decision variable constraints. </br>
 _X<sup>hπ</sup><sub>ab</sub>_ ϵ {0,1} ∀a ϵ N, b ϵ N, h ϵ H, π ϵ PI. </br> 
 _Y<sup>hπ</sup><sub>gab</sub>_ ≥ 0 ∀g ϵ G, a ϵ N, b ϵ N, h ϵ H, π ϵ PI. </br> 
