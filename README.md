@@ -4,7 +4,7 @@
 Team B (Supply Chain Resilience)</br></br>
 T12303106 David Benedi </br>
 R11725028 陳柄瑞  </br>
-R12725060 陳祖譽  </br>
+R12725060 Welbey Prasadirta 陳祖譽  </br>
 
 ## Table of Contents
 1. [Background and Motivation](https://github.com/cxap871210/2023_ORA_TeamB?tab=readme-ov-file#table-of-contents) </br>
