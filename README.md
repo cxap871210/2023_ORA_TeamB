@@ -88,7 +88,6 @@ R12725060 陳祖譽 Welbey Prasadirta  </br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Objective Function** 
  - minimize _T_ </br></br>
 **Constraints** </br></br>
-
  - Constraint 1: a given vehicle will only use one link to move in each journey. </br>
 ∑<sub>a∈N</sub> ∑<sub>b∈N</sub> _X<sup>hπ</sup><sub>ab</sub>_ ≤ 1 ∀h ∈ H, π ∈ PI. </br>
 <p align="justify"> In the mathematical model ensures that each vehicle in the fleet uses exactly one link to move from one node to another in each journey.
