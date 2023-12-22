@@ -29,7 +29,12 @@ R12725060 陳祖譽 Welbey Prasadirta  </br>
 - **Global Significance**: Earthquakes and other natural disasters are world phenomena and are not limited to any specific region. The model and methodologies developed in this research have international applicability and can provide valuable insights and frameworks for disaster response globally.
   
 ### Background
+
+<p align="justify">The background of the problem involves understanding the complexities of disaster response, particularly in distributing various commodities to affected areas. Challenges include dealing with damaged infrastructure and logistical constraints. The importance of material requirement planning and capacity planning in this context lies in their ability to streamline the distribution process, ensuring timely and adequate supply of necessary goods to disaster-stricken areas. </p>
+
 ### Problem Definition
+
+<p align="justify">The problem is defined as the need for a robust model to optimize the distribution of multiple commodities in the disaster response phase. The study proposes a solution that takes into account the uncertainties and constraints typical of post-disaster scenarios. This involves developing a stochastic programming model that aims to minimize the total time associated with the allocation of resources and capacities for fulfilling the demand in a disrupted supply chain network. </p>
 
 ## Methodology
 ### Inventory Routing Problem (Gurobi Optimizer)
