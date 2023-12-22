@@ -101,7 +101,9 @@ b, the amount of commodity g picked up by vehicle h in the previous journey (π�
 This constraint ensures the continuity of vehicle routing and that the flow of commodities is accounted for accurately in the mathematical optimization problem.</p>
 
  - Constraint 3: guaranteeing that the commodities shipped to the DC are zero. </br>
-_Y<sup>hπ</sup><sub>ga1</sub>_ = 0 ∀h ϵ H, π ϵ PI, g ϵ G, a ϵ N. </br></br>
+_Y<sup>hπ</sup><sub>ga1</sub>_ = 0 ∀h ϵ H, π ϵ PI, g ϵ G, a ϵ N. </br>
+<p align="justify">In the mathematical model ensures that the amount of commodities shipped to the DC is zero. This is a critical aspect of the model because it implies that vehicles are not allowed to transport commodities back to the DC. This constraint effectively maintains the flow of commodities in one direction - from the distribution centers to the points of need, rather than allowing for a backflow to the centers or to non-operational points, thereby ensuring that relief efforts are directed outward from supply points to where they are needed.</p>
+
  - Constraint 4: ensuring that the final inventory level of all nodes must be greater than or equal to their demand. </br>
 _I<sub>gb</sub>_ + ∑<sub>h∈H</sub> ∑<sub>π∈PI</sub> ∑<sub>a∈N</sub> _Y<sup>hπ</sup><sub>gab</sub>_ - ∑<sub>h∈H</sub> ∑<sub>π∈PI</sub> ∑<sub>c∈N</sub> _Y<sup>hπ</sup><sub>gbc</sub>_ ≥ _Q<sub>gb</sub>_ ∀g ϵ G, b ϵ N. </br></br>
  - Constraint 5: vehicle capacity. </br>
