@@ -21,6 +21,13 @@ R12725060 陳祖譽 Welbey Prasadirta  </br>
 
 ## Background and Motivation
 ### Motivation
+
+- **Humanitarian Impact**: In the aftermath of earthquakes, there is a surge in demand for life-supporting commodities like food, water, medical supplies, and survival equipment. The efficient distribution of these supplies is crucial to mitigate the suffering of affected populations and potentially save lives​.
+- **Prevention of Social Upset and Mistrust**: Ineffective and slow delivery of essential commodities can lead to high anxiety levels among the population, mistrust in government authorities, and even social conflict. These can exacerbate the already dire situation in disaster-stricken areas, making commodity distribution optimization even more crucial​.
+- **Addressing the Challenge of Uncertainty**: Post-disaster environments are highly uncertain, and characterized by disrupted transportation networks. The decision-making process in these scenarios is complex and challenging, necessitating systematic and coordinated planning and response strategies​.
+- **Historical Precedence and Ongoing Risk**: over the years, the world has witnessed numerous large-scale natural disasters resulting in significant loss of life, displacement of populations, and extensive damage to infrastructure and economies. Regions like Taiwan, which are geographically prone to typhoons, floods, earthquakes, and tsunamis, face a continuous threat. Efficient disaster response strategies are vital for these areas to minimize the impact of such catastrophic events​.
+- **Global Significance**: Earthquakes and other natural disasters are world phenomena and are not limited to any specific region. The model and methodologies developed in this research have international applicability and can provide valuable insights and frameworks for disaster response globally.
+  
 ### Background
 ### Problem Definition
 
