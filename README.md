@@ -116,7 +116,7 @@ This constraint ensures that the vehicle capacities are not exceeded and that th
 
  - Constraint 6: maximizing total times in each journey. </br>
 _T_ ≥  ∑<sub>π∈PI</sub> ∑<sub>a∈N</sub> ∑<sub>b∈N</sub> _X<sup>hπ</sup><sub>ab</sub>_ × _t<sub>ab<sub>_ ∀h ϵ H. </br>
-<p align="justify">Every vehicle in each journey has its different traveling time according to the path they are taking. The constraint will help the model to choose the maximum number of journey times in each journey to be totaled at the end of the model.</p>
+<p align="justify">Every vehicle in each journey has its different traveling time according to the path they are taking. The constraint will help the model to choose the maximum travelling times in each journey to be totaled at the end of the model.</p>
 
  - Constraint 7: decision variable constraints. </br>
 _X<sup>hπ</sup><sub>ab</sub>_ ϵ {0,1} ∀a ϵ N, b ϵ N, h ϵ H, π ϵ PI. </br> 
