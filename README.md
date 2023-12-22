@@ -89,9 +89,17 @@ R12725060 陳祖譽 Welbey Prasadirta  </br>
  - minimize _T_ </br></br>
 **Constraints** </br></br>
  - Constraint 1: a given vehicle will only use one link to move in each journey. </br>
-∑<sub>a∈N</sub> ∑<sub>b∈N</sub> _X<sup>hπ</sup><sub>ab</sub>_ ≤ 1 ∀h ∈ H, π ∈ PI. </br></br>
+∑<sub>a∈N</sub> ∑<sub>b∈N</sub> _X<sup>hπ</sup><sub>ab</sub>_ ≤ 1 ∀h ∈ H, π ∈ PI. </br>
+<p align="justify"> In the mathematical model ensures that each vehicle in the fleet uses exactly one link to move from one node to another in each journey.
+This implies that in each journey π, a vehicle h will travel from node a to node b using one designated path, ensuring that the routing of vehicles
+is properly defined and does not allow for any vehicle to travel on multiple paths simultaneously. </p>
+
  - Constraint 2: allowing vehicle journeys to be connected, i.e., the end of the previous journey is the starting point of the next. </br>
-∑<sub>a∈N</sub> _X<sup>h(π-1)</sup><sub>ab</sub>_ ≤ ∑<sub>c∈N</sub> _X<sup>hπ</sup><sub>bc</sub>_ ∀b ∈ N, h ∈ H, π ∈ {2,3,…,θ}. </br></br>
+∑<sub>a∈N</sub> _X<sup>h(π-1)</sup><sub>ab</sub>_ ≤ ∑<sub>c∈N</sub> _X<sup>hπ</sup><sub>bc</sub>_ ∀b ∈ N, h ∈ H, π ∈ {2,3,…,θ}. </br>
+<p align="justify">In the mathematical model refers to the sequential connection of vehicle journeys. It ensures that the end of one journey must be the starting point for the subsequent journey. This is modeled by stating that for any node 
+b, the amount of commodity g picked up by vehicle h in the previous journey (π−1) should be smaller and equal to the amount of commodity g delivered to the same node b by the same vehicle h in the next journey π.
+This constraint ensures the continuity of vehicle routing and that the flow of commodities is accounted for accurately in the mathematical optimization problem.</p>
+
  - Constraint 3: guaranteeing that the commodities shipped to the DC are zero. </br>
 _Y<sup>hπ</sup><sub>ga1</sub>_ = 0 ∀h ϵ H, π ϵ PI, g ϵ G, a ϵ N. </br></br>
  - Constraint 4: ensuring that the final inventory level of all nodes must be greater than or equal to their demand. </br>
