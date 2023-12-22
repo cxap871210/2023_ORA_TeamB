@@ -88,6 +88,7 @@ R12725060 陳祖譽 Welbey Prasadirta  </br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Objective Function** 
  - minimize _T_ </br></br>
 **Constraints** </br></br>
+
  - Constraint 1: a given vehicle will only use one link to move in each journey. </br>
 ∑<sub>a∈N</sub> ∑<sub>b∈N</sub> _X<sup>hπ</sup><sub>ab</sub>_ ≤ 1 ∀h ∈ H, π ∈ PI. </br>
 <p align="justify"> In the mathematical model ensures that each vehicle in the fleet uses exactly one link to move from one node to another in each journey.
@@ -115,7 +116,8 @@ This constraint wants to ensure that at the end of the model, all the RC's deman
 This constraint ensures that the vehicle capacities are not exceeded and that the flow of commodities is in accordance with the planned routing and vehicle assignments. </p>
 
  - Constraint 6: maximizing total times in each journey. </br>
-_T_ ≥  ∑<sub>π∈PI</sub> ∑<sub>a∈N</sub> ∑<sub>b∈N</sub> _X<sup>hπ</sup><sub>ab</sub>_ × _t<sub>ab<sub>_ ∀h ϵ H. </br></br>
+_T_ ≥  ∑<sub>π∈PI</sub> ∑<sub>a∈N</sub> ∑<sub>b∈N</sub> _X<sup>hπ</sup><sub>ab</sub>_ × _t<sub>ab<sub>_ ∀h ϵ H. </br>
+<p align="justify">Every vehicle in each journey has its different traveling time according to the path they are taking. The constraint will help the model to choose the maximum number of journey times in each journey to be totaled at the end of the model.</p>
 
  - Constraint 7: decision variable constraints. </br>
 _X<sup>hπ</sup><sub>ab</sub>_ ϵ {0,1} ∀a ϵ N, b ϵ N, h ϵ H, π ϵ PI. </br> 
