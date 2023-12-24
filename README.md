@@ -89,52 +89,52 @@ R12725060 陳祖譽 Welbey Prasadirta  </br>
  - minimize _T_ </br></br>
 **Constraints** </br></br>
  - Constraint 1: a given vehicle will only use one link to move in each journey. </br>
-∑<sub>a∈N</sub> ∑<sub>b∈N</sub> _X<sup>hπ</sup><sub>ab</sub>_ ≤ 1 ∀h ∈ H, π ∈ PI. </br>
-<p align="justify"> In the mathematical model ensures that each vehicle in the fleet uses exactly one link to move from one node to another in each journey.
-This implies that in each journey π, a vehicle h will travel from node a to node b using one designated path, ensuring that the routing of vehicles
+∑<sub>a∈N</sub> ∑<sub>b∈N</sub> $X^{hπ}_{ab}$ ≤ 1 ∀h ∈ H, π ∈ PI. </br>
+<p align="justify"> The mathematical model ensures that each vehicle in the fleet uses exactly one link to move from one node to another in each journey.
+This implies that in each journey π, vehicle h will travel from node a to node b using one designated path, ensuring that the routing of vehicles
 is properly defined and does not allow for any vehicle to travel on multiple paths simultaneously. </p>
 
  - Constraint 2: allowing vehicle journeys to be connected, i.e., the end of the previous journey is the starting point of the next. </br>
-∑<sub>a∈N</sub> _X<sup>h(π-1)</sup><sub>ab</sub>_ ≤ ∑<sub>c∈N</sub> _X<sup>hπ</sup><sub>bc</sub>_ ∀b ∈ N, h ∈ H, π ∈ {2,3,…,θ}. </br>
-<p align="justify">In the mathematical model refers to the sequential connection of vehicle journeys. It ensures that the end of one journey must be the starting point for the subsequent journey. This is modeled by stating that for any node 
+∑<sub>a∈N</sub> $X^{hπ}_{ab}$ ≤ ∑<sub>c∈N</sub> $X^{hπ}_{bc}$ ∀b ∈ N, h ∈ H, π ∈ {2,3,…,θ}. </br>
+<p align="justify"> The mathematical model refers to the sequential connection of vehicle journeys. It ensures that the end of one journey must be the starting point for the subsequent journey. This is modeled by stating that for any node 
 b, the amount of commodity g picked up by vehicle h in the previous journey (π−1) should be smaller and equal to the amount of commodity g delivered to the same node b by the same vehicle h in the next journey π.
 This constraint ensures the continuity of vehicle routing and that the flow of commodities is accounted for accurately in the mathematical optimization problem.</p>
 
  - Constraint 3: guaranteeing that the commodities shipped to the DC are zero. </br>
-_Y<sup>hπ</sup><sub>ga1</sub>_ = 0 ∀h ϵ H, π ϵ PI, g ϵ G, a ϵ N. </br>
-<p align="justify">In the mathematical model ensures that the amount of commodities shipped to the DC is zero. This is a critical aspect of the model because it implies that vehicles are not allowed to transport commodities back to the DC. This constraint effectively maintains the flow of commodities in one direction - from the distribution centers to the points of need, rather than allowing for a backflow to the centers or to non-operational points, thereby ensuring that relief efforts are directed outward from supply points to where they are needed.</p>
+$Y^{hπ}_{ga1}$ = 0 ∀h ϵ H, π ϵ PI, g ϵ G, a ϵ N. </br>
+<p align="justify"> The mathematical model ensures that the amount of commodities shipped to the DC is zero. This is a critical aspect of the model because it implies that vehicles are not allowed to transport commodities back to the DC. This constraint effectively maintains the flow of commodities in one direction - from the distribution centers to the points of need, rather than allowing for backflow to the centers or non-operational points, thereby ensuring that relief efforts are directed outward from supply points to where they are needed.</p>
 
  - Constraint 4: ensuring that the final inventory level of all nodes must be greater than or equal to their demand. </br>
-_I<sub>gb</sub>_ + ∑<sub>h∈H</sub> ∑<sub>π∈PI</sub> ∑<sub>a∈N</sub> _Y<sup>hπ</sup><sub>gab</sub>_ - ∑<sub>h∈H</sub> ∑<sub>π∈PI</sub> ∑<sub>c∈N</sub> _Y<sup>hπ</sup><sub>gbc</sub>_ ≥ _Q<sub>gb</sub>_ ∀g ϵ G, b ϵ N. </br>
-<p align="justify">In the mathematical model ensures that the final inventory level of all nodes must be greater than or equal to their demand. Sometimes it is more optimal to pick up commodities from RC rather than go back and pick them up from DC.
+_I<sub>gb</sub>_ + ∑<sub>h∈H</sub> ∑<sub>π∈PI</sub> ∑<sub>a∈N</sub> $Y^{hπ}_{gab}$ - ∑<sub>h∈H</sub> ∑<sub>π∈PI</sub> ∑<sub>c∈N</sub> $Y^{hπ}_{gab}$ ≥ _Q<sub>gb</sub>_ ∀g ϵ G, b ϵ N. </br>
+<p align="justify"> The mathematical model ensures that the final inventory level of all nodes must be greater than or equal to their demand. Sometimes it is more optimal to pick up commodities from RC rather than go back and pick them up from DC.
 This constraint wants to ensure that at the end of the model, all the RC's demands are fulfilled. All the RC demands are guaranteed fulfilled because the DC supply is unlimited.</p>
 
  - Constraint 5: vehicle capacity. </br>
-∑<sub>g∈G</sub> _Y<sup>hπ</sup><sub>gab</sub>_ ≤ _carryingvolume_ x _X<sup>hπ</sup><sub>ab</sub>_ ∀h ∈ H, π ∈ PI, a ∈ N, b ∈ N. </br>
-<p align="justify">In the mathematical model sets a limit on the amount of commodity g that can be picked up from node a and delivered to node b by vehicle h in journey π. 
-This constraint ensures that the vehicle capacities are not exceeded and that the flow of commodities is in accordance with the planned routing and vehicle assignments. </p>
+∑<sub>g∈G</sub> $Y^{hπ}_{gab}$ ≤ _carryingvolume_ x  $X^{hπ}_{ab}$ ∀h ∈ H, π ∈ PI, a ∈ N, b ∈ N. </br>
+<p align="justify"> The mathematical model sets a limit on the amount of commodity g that can be picked up from node a and delivered to node b by vehicle h in journey π. 
+This constraint ensures that the vehicle capacities are not exceeded and that the flow of commodities is by the planned routing and vehicle assignments. </p>
 
  - Constraint 6: maximizing total times in each journey. </br>
-_T_ ≥  ∑<sub>π∈PI</sub> ∑<sub>a∈N</sub> ∑<sub>b∈N</sub> _X<sup>hπ</sup><sub>ab</sub>_ × _t<sub>ab<sub>_ ∀h ϵ H. </br>
+_T_ ≥  ∑<sub>π∈PI</sub> ∑<sub>a∈N</sub> ∑<sub>b∈N</sub>  $X^{hπ}_{ab}$ × _t<sub>ab<sub>_ ∀h ϵ H. </br>
 <p align="justify">Every vehicle in each journey has its different traveling time according to the path they are taking. The constraint will help the model to choose the maximum travelling times in each journey to be totaled at the end of the model.</p>
 
  - Constraint 7: decision variable constraints. </br>
-_X<sup>hπ</sup><sub>ab</sub>_ ϵ {0,1} ∀a ϵ N, b ϵ N, h ϵ H, π ϵ PI. </br> 
-_Y<sup>hπ</sup><sub>gab</sub>_ ≥ 0 ∀g ϵ G, a ϵ N, b ϵ N, h ϵ H, π ϵ PI. </br> 
+$X^{hπ}_{ab}$ ϵ {0,1} ∀a ϵ N, b ϵ N, h ϵ H, π ϵ PI. </br> 
+$Y^{hπ}_{gab}$ ≥ 0 ∀g ϵ G, a ϵ N, b ϵ N, h ϵ H, π ϵ PI. </br> 
 _t<sub>ab<sub>_ ≥ 0 ∀a ϵ N, b ϵ N. </br>
 
 
 ## Data Collection and Analysis Result
 ### Data Collection
 ### Analysis
-We apply Sample Average Approximation method to analyze this problem. The SAA method for solving stochastic optimization problems involves generating a set of samples from the probability distribution representing uncertainties, such as the impact of earthquakes on road travel times. In our analysis, we generate 30 samples from a road damage probability density function proposed in the reference paper. The road damage probability density function is as followed:  
+We apply the Sample Average Approximation method to analyze this problem. The SAA method for solving stochastic optimization problems involves generating a set of samples from the probability distribution representing uncertainties, such as the impact of earthquakes on road travel times. In our analysis, we generate 30 samples from a road damage probability density function proposed in the reference paper. The road damage probability density function is as follows:  
 $$p_i(x) = \frac{1}{\sqrt{2 \pi} \beta x}e^{\left[ -\frac{1}{2}(\frac{\ln x - \ln m}{\beta})^2 \right]}  ,0 \leq x \leq \infty.$$
 $p_i$ represents the probability of road $i$ being damaged after an earthquake with PGD value $x$. Knowing $p_i$, we can compute the traveling time of road $i$ after being damaged by a sample draw of $\beta_i \thicksim (10-10p_i, \ 10p)$. We define that
 $$t^{damaged}_i(x) = t^{original}_i \times[1+\beta_i(p_i)]$$ 
-where $t^{original}_i$ is the original traveling time of road $i$ and $t^{damaged}_i$ is the traveling time of road $i$ after being damaged. For each sample, a random model is constructed by calculating the traveling time of each road according to above definition to describe the optimization problem under that specific scenario. The optimization problem is then solved for each sample, yielding corresponding optimal solutions. The average of these optimal solutions across all samples is computed to approximate the final solution. The performance of this solution, considering uncertainties, is evaluated. If a more precise result is desired, the process is iterated by increasing the number of samples. Overall, the SAA method provides a way to approximate solutions for optimization problems in the presence of uncertainty by simulating multiple scenarios and averaging the results.
+where $t^{original}_i$ is the original traveling time of road $i$ and $t^{damaged}_i$ is the traveling time of road $i$ after being damaged. For each sample, a random model is constructed by calculating the traveling time of each road according to the above definition to describe the optimization problem under that specific scenario. The optimization problem is then solved for each sample, yielding corresponding optimal solutions. The average of these optimal solutions across all samples is computed to approximate the final solution. The performance of this solution, considering uncertainties, is evaluated. If a more precise result is desired, the process is iterated by increasing the number of samples. Overall, the SAA method provides a way to approximate solutions for optimization problems in the presence of uncertainty by simulating multiple scenarios and averaging the results.
 
 ### Results and Managerial Implications
-<p align="justify"> The average of the completion time (longest) of vehicle assignment is 19.934, and the standard deviation is 0.217. Then the 95% confidence interval of the objective value is $[19.859, 20.009]$. The confidence interval signifies the uncertainty surrounding the estimated average for the completion time (longest) of vehicle assignment. The calculated average from the Sample Average Approximation (SAA) method, based on 30 computations, is 19.934. This average is viewed as an expectation of the vehicle travel metrics. The width of the confidence interval, established at a 95% confidence level, reflects the statistical uncertainty associated with this estimation. In practical terms, there is a 95% probability that the true average lies within this interval if similar experiments were conducted. This statistical range aids in comprehending the reliability of the average estimation, especially in the context of road damage caused by earthquakes and the resulting variability in travel times. </p>
+<p align="justify"> The average completion time (longest) of vehicle assignment is 19.934, and the standard deviation is 0.217. Then the 95% confidence interval of the objective value is $[19.859, 20.009]$. The confidence interval signifies the uncertainty surrounding the estimated average for the completion time (longest) of vehicle assignment. The calculated average from the Sample Average Approximation (SAA) method, based on 30 computations, is 19.934. This average is viewed as an expectation of the vehicle travel metrics. The width of the confidence interval, established at a 95% confidence level, reflects the statistical uncertainty associated with this estimation. In practical terms, there is a 95% probability that the true average lies within this interval if similar experiments were conducted. This statistical range aids in comprehending the reliability of the average estimation, especially in the context of road damage caused by earthquakes and the resulting variability in travel times. </p>
 
 ## Conclusion
 <p align="justify">In conclusion, the application of the Sample Average Approximation (SAA) method to address the impact of earthquake-induced road damage on the shortest distance and travel time estimation proved insightful. Through 30 iterations, the method produced a set of optimal solutions, yielding an average estimate of 19.934 for the vehicle travel metrics. The calculated confidence interval [19.859, 20.009] at a 95% confidence level encapsulates the statistical uncertainty associated with this average. This interval provides a valuable range, indicating that there is a 95% probability that the true average falls within it. Consequently, in the face of uncertain conditions introduced by the seismic event, this statistical approach offers a robust understanding of the reliability of the estimated shortest distance and travel time metrics. </p>
