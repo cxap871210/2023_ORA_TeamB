@@ -95,7 +95,7 @@ This implies that in each journey π, vehicle h will travel from node a to node 
 is properly defined and does not allow for any vehicle to travel on multiple paths simultaneously. </p>
 
  - Constraint 2: allowing vehicle journeys to be connected, i.e., the end of the previous journey is the starting point of the next.</br>
-   ∑<sub>a∈N</sub> _X<sup>h(π-1)</sup><sub>ab</sub>_ ≤ ∑<sub>c∈N</sub> X_<sup>hπ</sup><sub>bc</sub>_ ∀b ∈ N, h ∈ H, π ∈ {2,3,…,θ}. </br>
+   ∑<sub>a∈N</sub> _X<sup>h(π-1)</sup><sub>ab</sub>_ ≤ ∑<sub>c∈N</sub> _X<sup>hπ</sup><sub>bc</sub>_ ∀b ∈ N, h ∈ H, π ∈ {2,3,…,θ}. </br>
 <p align="justify"> The mathematical model refers to the sequential connection of vehicle journeys. It ensures that the end of one journey must be the starting point for the subsequent journey. This is modeled by stating that for any node 
 b, the amount of commodity g picked up by vehicle h in the previous journey (π−1) should be smaller and equal to the amount of commodity g delivered to the same node b by the same vehicle h in the next journey π.
 This constraint ensures the continuity of vehicle routing and that the flow of commodities is accounted for accurately in the mathematical optimization problem.</p>
