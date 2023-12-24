@@ -95,7 +95,7 @@ This implies that in each journey π, vehicle h will travel from node a to node 
 is properly defined and does not allow for any vehicle to travel on multiple paths simultaneously. </p>
 
  - Constraint 2: allowing vehicle journeys to be connected, i.e., the end of the previous journey is the starting point of the next.</br>
-   ∑<sub>a∈N</sub> X<sup>h(π-1)</sup>_<sub>ab</sub> ≤ ∑<sub>c∈N</sub> X<sup>hπ</sup>_<sub>bc</sub> ∀b ∈ N, h ∈ H, π ∈ {2,3,…,θ}. </br>
+   ∑<sub>a∈N</sub> _X<sup>h(π-1)</sup><sub>ab</sub>_ ≤ ∑<sub>c∈N</sub> X_<sup>hπ</sup><sub>bc</sub>_ ∀b ∈ N, h ∈ H, π ∈ {2,3,…,θ}. </br>
 <p align="justify"> The mathematical model refers to the sequential connection of vehicle journeys. It ensures that the end of one journey must be the starting point for the subsequent journey. This is modeled by stating that for any node 
 b, the amount of commodity g picked up by vehicle h in the previous journey (π−1) should be smaller and equal to the amount of commodity g delivered to the same node b by the same vehicle h in the next journey π.
 This constraint ensures the continuity of vehicle routing and that the flow of commodities is accounted for accurately in the mathematical optimization problem.</p>
@@ -105,12 +105,12 @@ $Y^{hπ}_{ga1}$ = 0 ∀h ϵ H, π ϵ PI, g ϵ G, a ϵ N. </br>
 <p align="justify"> The mathematical model ensures that the amount of commodities shipped to the DC is zero. This is a critical aspect of the model because it implies that vehicles are not allowed to transport commodities back to the DC. This constraint effectively maintains the flow of commodities in one direction - from the distribution centers to the points of need, rather than allowing for backflow to the centers or non-operational points, thereby ensuring that relief efforts are directed outward from supply points to where they are needed.</p>
 
  - Constraint 4: ensuring that the final inventory level of all nodes must be greater than or equal to their demand. </br>
-_I<sub>gb</sub>_ + ∑<sub>h∈H</sub> ∑<sub>π∈PI</sub> ∑<sub>a∈N</sub> Y<sup>hπ</sup>_<sub>gab</sub> - ∑<sub>h∈H</sub> ∑<sub>π∈PI</sub> ∑<sub>c∈N</sub> Y<sup>hπ</sup>_<sub>gab</sub> ≥ _Q<sub>gb</sub>_ ∀g ϵ G, b ϵ N. </br>
+_I<sub>gb</sub>_ + ∑<sub>h∈H</sub> ∑<sub>π∈PI</sub> ∑<sub>a∈N</sub> _Y<sup>hπ</sup><sub>gab</sub>_ - ∑<sub>h∈H</sub> ∑<sub>π∈PI</sub> ∑<sub>c∈N</sub> _Y<sup>hπ</sup>_<sub>gab</sub>_ ≥ _Q<sub>gb</sub>_ ∀g ϵ G, b ϵ N. </br>
 <p align="justify"> The mathematical model ensures that the final inventory level of all nodes must be greater than or equal to their demand. Sometimes it is more optimal to pick up commodities from RC rather than go back and pick them up from DC.
 This constraint wants to ensure that at the end of the model, all the RC's demands are fulfilled. All the RC demands are guaranteed fulfilled because the DC supply is unlimited.</p>
 
  - Constraint 5: vehicle capacity. </br>
-∑<sub>g∈G</sub> Y<sup>hπ</sup>_<sub>gab</sub> ≤ _carryingvolume_ x  X<sup>hπ</sup>_<sub>ab</sub> ∀h ∈ H, π ∈ PI, a ∈ N, b ∈ N. </br>
+∑<sub>g∈G</sub> _Y<sup>hπ</sup>_<sub>gab</sub>_ ≤ _carryingvolume_ x  _X<sup>hπ</sup>_<sub>ab</sub>_ ∀h ∈ H, π ∈ PI, a ∈ N, b ∈ N. </br>
 <p align="justify"> The mathematical model sets a limit on the amount of commodity g that can be picked up from node a and delivered to node b by vehicle h in journey π. 
 This constraint ensures that the vehicle capacities are not exceeded and that the flow of commodities is by the planned routing and vehicle assignments. </p>
 
@@ -119,8 +119,8 @@ _T_ ≥  ∑<sub>π∈PI</sub> ∑<sub>a∈N</sub> ∑<sub>b∈N</sub>  $X^{hπ}
 <p align="justify">Every vehicle in each journey has its different traveling time according to the path they are taking. The constraint will help the model to choose the maximum travelling times in each journey to be totaled at the end of the model.</p>
 
  - Constraint 7: decision variable constraints. </br>
-X<sup>hπ</sup>_<sub>ab</sub> ϵ {0,1} ∀a ϵ N, b ϵ N, h ϵ H, π ϵ PI. </br> 
-Y<sup>hπ</sup>_<sub>gab</sub> ≥ 0 ∀g ϵ G, a ϵ N, b ϵ N, h ϵ H, π ϵ PI. </br> 
+_X<sup>hπ</sup>_<sub>ab</sub>_ ϵ {0,1} ∀a ϵ N, b ϵ N, h ϵ H, π ϵ PI. </br> 
+_Y<sup>hπ</sup>_<sub>gab</sub>_ ≥ 0 ∀g ϵ G, a ϵ N, b ϵ N, h ϵ H, π ϵ PI. </br> 
 _t<sub>ab<sub>_ ≥ 0 ∀a ϵ N, b ϵ N. </br>
 
 
