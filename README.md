@@ -40,7 +40,7 @@ R12725060 陳祖譽 Welbey Prasadirta  </br>
 ### Inventory Routing Problem (Gurobi Optimizer)
 
 ### Model Objective 
-<p align="justify">to identify the most effective vehicle routes for distributing vital commodities from a Distribution Center (DC) to various Local Relief Centers (RCs) and between these RCs. The goal is to actively meet each Relief Center (RC) demand while minimizing the completion time (longest) of vehicle assignments, all within the context of stochastic traffic conditions caused by earthquake impacts. The model will account for each RC's pre-existing inventory sourced from local donations.</p>
+<p align="justify">To identify the most effective vehicle routes for distributing vital commodities from a Distribution Center (DC) to various Local Relief Centers (RCs) and between these RCs. The goal is to actively meet each Relief Center (RC) demand while minimizing the completion time (longest) of vehicle assignments, all within the context of stochastic traffic conditions caused by earthquake impacts. The model will account for each RC's pre-existing inventory sourced from local donations.</p>
 
 ### Model Assumptions
 -	Multiple vehicles can fulfill RC demand level (Split Delivery).
