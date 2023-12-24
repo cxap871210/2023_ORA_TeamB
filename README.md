@@ -138,3 +138,4 @@ The average of the completion time (longest) of vehicle assignment is 19.934, an
 
 ## Conclusion
 ## Reference
+Chang, K.-H., T.-Y. Hsiung, T.-Y. Chang. 2022. Multi-commodity distribution under uncertainty in disaster response phase: Model, solution method, and an empirical study. *European Journal of Operational Research* 303(2) 857–876.
