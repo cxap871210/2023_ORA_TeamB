@@ -94,8 +94,8 @@ R12725060 陳祖譽 Welbey Prasadirta  </br>
 This implies that in each journey π, vehicle h will travel from node a to node b using one designated path, ensuring that the routing of vehicles
 is properly defined and does not allow for any vehicle to travel on multiple paths simultaneously. </p>
 
- - Constraint 2: allowing vehicle journeys to be connected, i.e., the end of the previous journey is the starting point of the next.
-   $\sum_{a \in N}$
+ - Constraint 2: allowing vehicle journeys to be connected, i.e., the end of the previous journey is the starting point of the next. \\
+   $\sum_{a \in N} X^{h \pi}_{ab} \leq \sum_{c \in N} X^{h \pi}_{bc} \forall$
 <p align="justify"> The mathematical model refers to the sequential connection of vehicle journeys. It ensures that the end of one journey must be the starting point for the subsequent journey. This is modeled by stating that for any node 
 b, the amount of commodity g picked up by vehicle h in the previous journey (π−1) should be smaller and equal to the amount of commodity g delivered to the same node b by the same vehicle h in the next journey π.
 This constraint ensures the continuity of vehicle routing and that the flow of commodities is accounted for accurately in the mathematical optimization problem.</p>
