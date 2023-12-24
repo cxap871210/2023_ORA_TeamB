@@ -22,15 +22,15 @@ R12725060 陳祖譽 Welbey Prasadirta  </br>
 ## Background and Motivation
 ### Motivation
 
-- **Humanitarian Impact**: In the aftermath of earthquakes, there is a surge in demand for life-supporting commodities like food, water, medical supplies, and survival equipment. The efficient distribution of these supplies is crucial to mitigate the suffering of affected populations and potentially save lives​.
-- **Prevention of Social Upset and Mistrust**: Ineffective and slow delivery of essential commodities can lead to high anxiety levels among the population, mistrust in government authorities, and even social conflict. These can exacerbate the already dire situation in disaster-stricken areas, making commodity distribution optimization even more crucial​.
-- **Addressing the Challenge of Uncertainty**: Post-disaster environments are highly uncertain, and characterized by disrupted transportation networks. The decision-making process in these scenarios is complex and challenging, necessitating systematic and coordinated planning and response strategies​.
-- **Historical Precedence and Ongoing Risk**: over the years, the world has witnessed numerous large-scale natural disasters resulting in significant loss of life, displacement of populations, and extensive damage to infrastructure and economies. Regions like Taiwan, which are geographically prone to typhoons, floods, earthquakes, and tsunamis, face a continuous threat. Efficient disaster response strategies are vital for these areas to minimize the impact of such catastrophic events​.
+- **Humanitarian Impact**: In the aftermath of earthquakes, there is a surge in demand for life-supporting commodities like food, water, medical supplies, and survival equipment. The efficient distribution of these supplies is crucial to mitigate the suffering of affected populations and potentially save lives.
+- **Prevention of Social Upset and Mistrust**: Ineffective and slow delivery of essential commodities can lead to high anxiety levels among the population, mistrust in government authorities, and even social conflict. These can exacerbate the already dire situation in disaster-stricken areas, making commodity distribution optimization even more crucial.
+- **Addressing the Challenge of Uncertainty**: Post-disaster environments are highly uncertain, and characterized by disrupted transportation networks. The decision-making process in these scenarios is complex and challenging, necessitating systematic and coordinated planning and response strategies.
+- **Historical Precedence and Ongoing Risk**: over the years, the world has witnessed numerous large-scale natural disasters resulting in significant loss of life, displacement of populations, and extensive damage to infrastructure and economies. Regions like Taiwan, which are geographically prone to typhoons, floods, earthquakes, and tsunamis, face a continuous threat. Efficient disaster response strategies are vital for these areas to minimize the impact of such catastrophic events.
 - **Global Significance**: Earthquakes and other natural disasters are world phenomena and are not limited to any specific region. The model and methodologies developed in this research have international applicability and can provide valuable insights and frameworks for disaster response globally.
   
 ### Background
 
-<p align="justify">The background of the problem involves understanding the complexities of disaster response, particularly in distributing various commodities to affected areas. Challenges include dealing with damaged infrastructure and logistical constraints. The importance of material requirement planning and capacity planning in this context lies in their ability to streamline the distribution process, ensuring timely and adequate supply of necessary goods to disaster-stricken areas. </p>
+<p align="justify">The background of the problem involves understanding the complexities of disaster response, particularly in distributing various commodities to affected areas. Challenges include dealing with damaged infrastructure and logistical constraints. The importance of material requirement planning and capacity planning in this context lies in their ability to streamline the distribution process, ensuring a timely and adequate supply of necessary goods to disaster-stricken areas. </p>
 
 ### Problem Definition
 
@@ -116,7 +116,7 @@ This constraint ensures that the vehicle capacities are not exceeded and that th
 
  - Constraint 6: maximizing total times in each journey. </br>
 _T_ ≥  ∑<sub>π∈PI</sub> ∑<sub>a∈N</sub> ∑<sub>b∈N</sub>  $X^{hπ}_{ab}$ × _t<sub>ab<sub>_ ∀h ϵ H. </br>
-<p align="justify">Every vehicle in each journey has its different traveling time according to the path they are taking. The constraint will help the model to choose the maximum travelling times in each journey to be totaled at the end of the model.</p>
+<p align="justify">Every vehicle in each journey has its different traveling time according to the path they are taking. The constraint will help the model to choose the maximum traveling times in each journey to be totaled at the end of the model.</p>
 
  - Constraint 7: decision variable constraints. </br>
 _X<sup>hπ</sup><sub>ab</sub>_ ϵ {0,1} ∀a ϵ N, b ϵ N, h ϵ H, π ϵ PI. </br> 
