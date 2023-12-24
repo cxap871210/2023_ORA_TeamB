@@ -110,7 +110,7 @@ _I<sub>gb</sub>_ + ∑<sub>h∈H</sub> ∑<sub>π∈PI</sub> ∑<sub>a∈N</sub>
 This constraint wants to ensure that at the end of the model, all the RC's demands are fulfilled. All the RC demands are guaranteed fulfilled because the DC supply is unlimited.</p>
 
  - Constraint 5: vehicle capacity. </br>
-∑<sub>g∈G</sub> _Y<sup>hπ</sup><sub>gab</sub>_ x _volume<sub>g</sub> ≤ _carryingvolume_ x  _X<sup>hπ</sup><sub>ab</sub>_ ∀h ∈ H, π ∈ PI, a ∈ N, b ∈ N. </br>
+∑<sub>g∈G</sub> _Y<sup>hπ</sup><sub>gab</sub>_ x _volume<sub>g</sub>_ ≤ _carryingvolume_ x  _X<sup>hπ</sup><sub>ab</sub>_ ∀h ∈ H, π ∈ PI, a ∈ N, b ∈ N. </br>
 <p align="justify"> The mathematical model sets a limit on the amount of commodity g that can be picked up from node a and delivered to node b by vehicle h in journey π. 
 This constraint ensures that the vehicle capacities are not exceeded and that the flow of commodities is by the planned routing and vehicle assignments. </p>
 
