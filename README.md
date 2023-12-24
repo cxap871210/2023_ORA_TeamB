@@ -119,8 +119,8 @@ _T_ ≥  ∑<sub>π∈PI</sub> ∑<sub>a∈N</sub> ∑<sub>b∈N</sub>  $X^{hπ}
 <p align="justify">Every vehicle in each journey has its different traveling time according to the path they are taking. The constraint will help the model to choose the maximum travelling times in each journey to be totaled at the end of the model.</p>
 
  - Constraint 7: decision variable constraints. </br>
-_X<sup>hπ</sup>_<sub>ab</sub>_ ϵ {0,1} ∀a ϵ N, b ϵ N, h ϵ H, π ϵ PI. </br> 
-_Y<sup>hπ</sup>_<sub>gab</sub>_ ≥ 0 ∀g ϵ G, a ϵ N, b ϵ N, h ϵ H, π ϵ PI. </br> 
+_X<sup>hπ</sup><sub>ab</sub>_ ϵ {0,1} ∀a ϵ N, b ϵ N, h ϵ H, π ϵ PI. </br> 
+_Y<sup>hπ</sup><sub>gab</sub>_ ≥ 0 ∀g ϵ G, a ϵ N, b ϵ N, h ϵ H, π ϵ PI. </br> 
 _t<sub>ab<sub>_ ≥ 0 ∀a ϵ N, b ϵ N. </br>
 
 
