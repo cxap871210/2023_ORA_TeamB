@@ -81,8 +81,8 @@ R12725060 陳祖譽 Welbey Prasadirta  </br>
 -  Medication go bag, each medication go bag will fill 10 trucks carrying volume. </br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Decision Variables** 
- + _X<sup>hπ</sup><sub>ab</sub>_: if it is 1, it means that vehicle _h_ travels from node _a_ to node _b_ during its πth journey; otherwise, it is 0.
- + _Y<sup>hπ</sup><sub>gab</sub>_: the quantity of commodity _g_ transported by vehicle _h_ traveling from node _a_ to node _b_ during its πth journey.
+ + $X^{hπ}_{ab}$: if it is 1, it means that vehicle _h_ travels from node _a_ to node _b_ during its πth journey; otherwise, it is 0.
+ + $Y^{hπ}_{gab}$: the quantity of commodity _g_ transported by vehicle _h_ traveling from node _a_ to node _b_ during its πth journey.
 
 ### Model Formulation
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Objective Function** 
